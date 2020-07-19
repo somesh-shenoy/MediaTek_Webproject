@@ -33,6 +33,13 @@
     border-color: chocolate;
 }
 
+.source-text{
+    text-align: end;
+    color: darkblue;
+    margin: 0;
+    margin-right: 5px;
+}
+
 .login-form{
     display: flex;
     flex-direction: column;

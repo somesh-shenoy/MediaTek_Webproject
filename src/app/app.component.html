@@ -2,31 +2,38 @@
   <div class="left-content">
     <h1 class="header-text">Welcome to Demo website</h1>
     <section class="form-section">
-    <form class="login-form">
-      <input type="text" placeholder="Username" class="form-input"/>
-      <input type="text" placeholder="Password" class="form-input"/>
-      <button class="button" disabled>Login</button>
-    </form>
-  </section>
-  <section class="footer-section">
-<footer class="footer-text">
-  &copy; Copyright 2020-2021
-</footer>
-</section>
+      <form class="login-form">
+        <input type="text" placeholder="Username" class="form-input" />
+        <input type="text" placeholder="Password" class="form-input" />
+        <button class="button" disabled>Login</button>
+      </form>
+    </section>
+    <section class="footer-section">
+      <footer class="footer-text">
+        &copy; Copyright 2020-2021
+      </footer>
+    </section>
   </div>
 
   <ng-container *ngIf="ads.length>0">
 
     <div class="right-content">
       <h4 class="ad-header">Ad Section</h4>
-      <a target='_blank' (click)="adClick(ads[0].hrefUrl)">
-        <img [src]="ads[0].imageUrl" width="250" height="250" class="image-border">
-      </a>
 
-      <a target='_blank' (click)="adClick(ads[1].hrefUrl)">
-        <img [src]="ads[1].imageUrl" width="250" height="250" class="image-border">
-      </a>
+      <div>
+        <a target='_blank' (click)="adClick(ads[0].hrefUrl)">
+          <h5 class="source-text">{{ads[0].source|uppercase}}</h5>
+          <img [src]="ads[0].imageUrl" width="250" height="250" class="image-border">
+        </a>
+      </div>
+      <div>
 
+        <a target='_blank' (click)="adClick(ads[1].hrefUrl)">
+          <h5 class="source-text">{{ads[1].source|uppercase}}</h5>
+          <img [src]="ads[1].imageUrl" width="250" height="250" class="image-border">
+        </a>
+
+      </div>
     </div>
   </ng-container>
 </div>
